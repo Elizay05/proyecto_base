@@ -26,32 +26,31 @@ class AppTheme{
 
   ThemeData theme(){
     return ThemeData(
-      useMaterial3: true,
-      colorSchemeSeed: _colorTheme[selectedThemeColor],
-      appBarTheme: AppBarTheme(
+        useMaterial3: true,
+        colorSchemeSeed: _colorTheme[selectedThemeColor],
+        appBarTheme: AppBarTheme(
           color: _colorTheme[selectedThemeColor],
-      ),
-      textTheme: const TextTheme(
-        titleSmall: TextStyle(
-          fontSize: 15,
-          fontWeight: FontWeight.w300,
-          color: Colors.black,
-          fontFamily: 'Cabin',
         ),
-        titleMedium: TextStyle(
+        textTheme: const TextTheme(
+          bodySmall: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w300,
+            color: Colors.black,
+            fontFamily: 'Cabin',
+          ),
+          bodyMedium: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
             color: Colors.purpleAccent,
             fontFamily: 'Cabin',
-        ),
-        titleLarge: TextStyle(
+          ),
+          bodyLarge: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.w900,
             color: Colors.deepPurple,
             fontFamily: 'Roboto',
-        ),
-      )
+          ),
+        )
     );
   }
-
 }
