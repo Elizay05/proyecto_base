@@ -33,9 +33,9 @@ class HomeView extends StatelessWidget {
                     child: const Text('Soy un botón'
                     )
                 ),
-                 Text('Holi', style: Theme.of(context).textTheme.bodySmall),
-                Text('Holaaaa', style: Theme.of(context).textTheme.bodyMedium),
-                Text('Respirar', style: Theme.of(context).textTheme.bodyLarge),
+                 Text('Holi', style: Theme.of(context).textTheme.titleSmall),
+                Text('Holaaaa', style: Theme.of(context).textTheme.titleMedium),
+                Text('Respirar', style: Theme.of(context).textTheme.titleLarge),
               ],
             )
           ],

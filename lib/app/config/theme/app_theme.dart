@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
 const Color _primaryColor = Color(0xFFFC4664);
+const Color _secondaryColor = Color(0xFFAA46FC);
+const Color _white = Color(0xFFF5F5F5);
 
 const List<Color> _colorTheme = [
   _primaryColor,
+  _secondaryColor,
   Colors.white,
-  Color(0xFFF5F5F5),
+  _white,
   Color(0xFF030303),
   Color(0xFFAA46FC),
   Color(0xFF00008C),
@@ -21,31 +24,32 @@ class AppTheme{
   final int selectedThemeColor;
 
   AppTheme({
-    this.selectedThemeColor = 0
+    this.selectedThemeColor = 1
 }):assert(selectedThemeColor>=0 && selectedThemeColor < _colorTheme.length);
 
   ThemeData theme(){
     return ThemeData(
+        primaryColor: _colorTheme[selectedThemeColor],
+        secondaryHeaderColor: _colorTheme[selectedThemeColor],
         useMaterial3: true,
-        colorSchemeSeed: _colorTheme[selectedThemeColor],
         appBarTheme: AppBarTheme(
-          color: _colorTheme[selectedThemeColor],
+          color: _colorTheme[0],
         ),
         textTheme: const TextTheme(
-          bodySmall: TextStyle(
+          titleSmall: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w300,
             color: Colors.black,
             fontFamily: 'Cabin',
           ),
-          bodyMedium: TextStyle(
-            fontSize: 20,
+          titleMedium: TextStyle(
+            fontSize: 22,
             fontWeight: FontWeight.bold,
             color: Colors.purpleAccent,
             fontFamily: 'Cabin',
           ),
-          bodyLarge: TextStyle(
-            fontSize: 30,
+          titleLarge: TextStyle(
+            fontSize: 20,
             fontWeight: FontWeight.w900,
             color: Colors.deepPurple,
             fontFamily: 'Roboto',
